@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "scripts": {
+    "develop": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akselinurmio/tukesim18.git"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "homepage": "https://github.com/akselinurmio/tukesim18"
+}
