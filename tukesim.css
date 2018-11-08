@@ -1,3 +1,29 @@
+html {
+	font-family: Verdana, sans-serif;
+}
+
 body {
 	background: azure;
+}
+
+.separator {
+	display: block;
+	text-align: center;
+	margin: 1em 0;
+}
+
+.button {
+	display: inline-block;
+	font-size: 0.8em;
+	background-color: aqua;
+	color: inherit;
+	padding: 0.5em;
+	text-decoration: none;
+	border: silver outset;
+	cursor: default;
+	user-select: none;
+}
+
+.button:active {
+	border-style: inset;
 }
