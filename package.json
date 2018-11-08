@@ -1,9 +1,11 @@
 {
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "prettier": "^1.15.1"
   },
   "scripts": {
-    "develop": "live-server"
+    "develop": "live-server",
+    "format": "prettier --write *.{html,css}"
   },
   "repository": {
     "type": "git",
