@@ -1,17 +1,23 @@
 {
   "devDependencies": {
-    "live-server": "^1.2.0",
-    "prettier": "^1.15.1"
+    "husky": "^1.2.0",
+    "parcel-bundler": "^1.10.3",
+    "prettier": "^1.15.3"
   },
   "scripts": {
-    "develop": "live-server",
-    "format": "prettier --write *.{html,css}"
+    "build": "parcel build index.html",
+    "develop": "parcel index.html",
+    "format": "prettier --write *.{html,css,js}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akselinurmio/tukesim18.git"
   },
-  "contributors": [],
   "license": "MIT",
   "homepage": "https://github.com/akselinurmio/tukesim18"
 }
