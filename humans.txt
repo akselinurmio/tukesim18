@@ -1,2 +1,9 @@
-/* TIIMI */
-	Kehittäjä: Akseli Nurmio
+/* KOTISIVU */
+	Akseli Nurmio
+	Teemu Rytilä
+
+/* VIDEO */
+	Roope Iivarinen
+	Noora Karlsson
+	Anniina Perätalo
+	Elina Petriläinen
