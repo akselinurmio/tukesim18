@@ -6,6 +6,10 @@ body {
 	background: azure;
 }
 
+.container {
+	max-width: 40em;
+}
+
 .separator {
 	display: block;
 	text-align: center;
