@@ -20,5 +20,8 @@
     "url": "git+https://github.com/akselinurmio/tukesim18.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/akselinurmio/tukesim18"
+  "homepage": "https://github.com/akselinurmio/tukesim18",
+  "dependencies": {
+    "video.js": "^7.3.0"
+  }
 }

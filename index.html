@@ -35,6 +35,10 @@
 				<dd>Siksi.</dd>
 			</dl>
 
+			<div class="installed" style="display: none;">
+				SlowSpace Player asennettu.
+				<button class="button" id="deleteTrigger">Poista</button>
+			</div>
 			<div class="player js-player">
 				<div class="player__videowrapper">
 					<video loop preload>
@@ -74,7 +78,14 @@
 					</div>
 				</div>
 				<div class="player__controls">
-					<button class="button js-player__play" data-pause-text="Vilmi poikki">
+					<button class="button" id="sequenceTrigger" style="display: none;">
+						Vilmi käynttii nii
+					</button>
+					<button
+						class="button js-player__play"
+						data-pause-text="Vilmi poikki"
+						style="display: none;"
+					>
 						Vilmi käynttii nii</button
 					>&lt;-- toi on play-nappi :)
 					<button class="button js-player__start-again">Uuvestaa</button>
@@ -230,6 +241,126 @@
 			<div class="snow snow--far snow--alt"></div>
 		</div>
 
-		<script src="video.js" async></script>
+		<div class="dialog" id="requestDialog">
+			<div class="dialogContainer">
+				<img
+					class="errorSymbol pixelatedImage"
+					src="./images/warning.png"
+					alt="Warning"
+				/>
+				<span
+					>Tämä video vaatii toimiakseen SlowSpace Playerin. Haluatko asentaa
+					sen nyt?</span
+				>
+			</div>
+			<button class="button windowsButton alignRight" id="cancelTrigger">
+				Peruuta
+			</button>
+			<button class="button windowsButton alignRight" id="downloadTrigger">
+				OK
+			</button>
+		</div>
+
+		<div class="overlay"></div>
+
+		<div class="dialog" id="downloadDialog">
+			<img
+				src="./images/download.gif"
+				alt="Downloading file"
+				class="downloadGif pixelatedImage"
+			/>
+			<div class="progressBar">
+				<div class="barCluster" id="bC1">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<div class="barCluster" id="bC2">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<div class="barCluster" id="bC3">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<div class="barCluster" id="bC4">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<div class="barCluster" id="bC5">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+			</div>
+			<span id="loadingText">Ladataan...</span>
+			<button
+				class="button windowsButton alignRight noMargin"
+				id="errorTrigger"
+				style="display: none;"
+			>
+				Jatka
+			</button>
+		</div>
+
+		<div class="errorDialogContainer">
+			<div class="dialog" id="errorDialog">
+				<div class="dialogContainer">
+					<img
+						class="errorSymbol pixelatedImage"
+						src="./images/error.png"
+						alt="Error"
+					/>
+					<span>Jotain meni vikaan.</span>
+				</div>
+				<button class="button windowsButton alignCenter" id="continueTrigger">
+					OK
+				</button>
+			</div>
+		</div>
+
+		<div class="bsod">
+			<img class="pixelatedImage" src="./images/bsod.png" alt="BSOD" />
+		</div>
+
+		<div class="reboot">
+			<div class="rebootInner">
+				<p>Käynnistetään uudelleen...</p>
+				<div class="rebootProgress">
+					<div class="rebootProgressInner"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dialog" id="resetDialog">
+			<div class="dialogContainer">
+				<img
+					class="errorSymbol pixelatedImage"
+					src="./images/warning.png"
+					alt="Warning"
+				/>
+				<span
+					>Tietokoneesi on käynnistynyt uudelleen järjestelmävirheen
+					vuoksi.</span
+				>
+			</div>
+			<button class="button windowsButton alignCenter" id="resetTrigger">
+				OK
+			</button>
+		</div>
 	</body>
+	<script src="./js/index.js" async></script>
 </html>
