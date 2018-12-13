@@ -1,5 +1,6 @@
 if (localStorage.getItem("playerInstalled") === null) {
 	localStorage.setItem("playerInstalled", "false");
+	document.querySelector("#sequenceTrigger").style.display = "inline-block";
 } else if (localStorage.getItem("playerInstalled") === "false") {
 	document.querySelector("#sequenceTrigger").style.display = "inline-block";
 } else if (localStorage.getItem("playerInstalled") === "true") {
