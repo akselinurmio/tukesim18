@@ -6,6 +6,8 @@ html {
 ::before,
 ::after {
 	box-sizing: inherit;
+	image-rendering: pixelated;
+	cursor: inherit;
 }
 
 body {
@@ -13,6 +15,27 @@ body {
 	font-family: Verdana, sans-serif;
 	background: lightgray;
 	color: black;
+	animation: disturbingCursor 1s infinite linear;
+}
+
+@keyframes disturbingCursor {
+	0%,
+	100% {
+		cursor: w-resize;
+	}
+	25% {
+		cursor: n-resize;
+	}
+	50% {
+		cursor: e-resize;
+	}
+	75% {
+		cursor: s-resize;
+	}
+}
+
+img {
+	max-width: 100%;
 }
 
 .container {
@@ -20,9 +43,12 @@ body {
 }
 
 .separator {
-	display: block;
-	text-align: center;
-	margin: 1em 0;
+	margin: 2em 0;
+}
+
+.separator img {
+	max-height: 10em;
+	max-width: 10em;
 }
 
 .button {
@@ -34,13 +60,17 @@ body {
 	padding: 0.5em;
 	text-decoration: none;
 	border: silver outset;
-	cursor: default;
 	user-select: none;
 	outline: none;
 }
 
 .button:active {
 	border-style: inset;
+}
+
+.inline-gif {
+	width: auto;
+	height: 2em;
 }
 
 /* Video player */
@@ -86,6 +116,25 @@ body {
 
 .player__controls {
 	margin: 0.5em 0;
+}
+
+/* Christmas special */
+
+.christmas {
+	background: black;
+	color: red;
+	margin: 2em 0;
+	text-align: center;
+	border-radius: 20%;
+}
+
+.christmas span {
+	color: green;
+}
+
+.christmas img {
+	position: relative;
+	z-index: 1;
 }
 
 /* Let it snow, let it etc... */
