@@ -26,6 +26,58 @@
 				<dd>Siksi.</dd>
 			</dl>
 
+			<div class="player js-player">
+				<div class="player__videowrapper">
+					<video loop preload>
+						<source src="videos/divi_tv.mp4" type="video/mp4" />
+					</video>
+					<div class="player__screensaver js-player__screensaver">
+						<marquee direction="down" behavior="alternate" height="100%">
+							<marquee behavior="alternate">
+								<svg
+									class="player__logo js-player__logo"
+									xmlns="http://www.w3.org/2000/svg"
+									width="399"
+									height="204"
+									viewBox="0 0 400 204"
+									shape-rendering="geometricPrecision"
+									text-rendering="geometricPrecision"
+									image-rendering="optimizeQuality"
+									fill-rule="evenodd"
+								>
+									<path
+										fill="currentColor"
+										d="M145 24h33v154h-33zM216 24h33v154h-33zM27 24h37l39 155H66L27 24z"
+									/>
+									<path
+										fill="currentColor"
+										d="M131 24h-20c-1 1-1 4 0 5 2 6 1 13 0 19L81 179h15l35-155zM220 123h-73l-9 14h58c9 0 21-7 24-14zM327 89c-51-10-34-52-5-52h47l6-13h-61c-18 0-57 18-52 53 2 23 18 32 47 40 50 12 34 48 12 48h-54l6 14h51c27 0 51-19 51-46-1-28-16-38-48-44z"
+									/>
+									<path
+										fill="none"
+										stroke="currentColor"
+										stroke-width="7"
+										d="M8 7h386v190H8z"
+									/>
+								</svg>
+							</marquee>
+						</marquee>
+					</div>
+				</div>
+				<div class="player__controls">
+					<button class="button js-player__play" data-pause-text="Vilmi poikki">
+						Vilmi käynttii nii
+					</button>
+					<button class="button js-player__start-again">Uuvestaa</button>
+					<button
+						class="button js-player__volume"
+						data-louder-text="Kovemmalle"
+					>
+						Hiljemmalle
+					</button>
+				</div>
+			</div>
+
 			<div class="separator">***</div>
 
 			<article>
@@ -131,5 +183,7 @@
 			<div class="snow snow--far"></div>
 			<div class="snow snow--far snow--alt"></div>
 		</div>
+
+		<script src="video.js" async></script>
 	</body>
 </html>

@@ -43,6 +43,51 @@ body {
 	border-style: inset;
 }
 
+/* Video player */
+.player {
+	position: relative;
+	z-index: 1;
+}
+
+.player__videowrapper {
+	position: relative;
+	background: black;
+	padding-top: 56.25%;
+}
+
+.player__videowrapper video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.player__screensaver {
+	pointer-events: none;
+	transition: visibility 0s 2s;
+}
+
+.js-player--playing .player__screensaver {
+	visibility: hidden;
+	transition: none;
+}
+
+.player__screensaver > marquee {
+	position: absolute;
+	top: 0;
+}
+
+.player__logo {
+	width: 10em;
+	height: auto;
+	color: deeppink;
+}
+
+.player__controls {
+	margin: 0.5em 0;
+}
+
 /* Let it snow, let it etc... */
 .diwinter,
 .snow {
